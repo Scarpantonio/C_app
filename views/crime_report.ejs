@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>heroku test</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Reporta Crimen</h1>
+            <!-- <a href="/posts/new">Create User</a> -->
+        </header>
+    <form action="/user/store" method="POST">
+        <label>Titulo de/los Sucesos</label><br>
+            <input type="text" name="name" placeholder="Titulo de lo sucedido">
+            <br>
+        <label></label>
+            <textarea rows="5" placeholder="Que sucedio en tu urbarnizacion?" name="body"></textarea>              
+            <br>
+        <label>Ubicacion del suceso</label><br>
+        <input type="text" name="location" placeholder="Titulo de lo sucedido">
+        <br>
+        <button type="submit">Send</button>
+    </form>
+
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
