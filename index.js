@@ -22,7 +22,10 @@ const bodyParser = require('body-parser')
 app.set('view engine','ejs')
 app.use(express.static('public'))
 
-mongoose.connect('mongodb://localhost:27017/heroku_test', {useNewUrlParser: true});
+// local mongoose
+// mongoose.connect('mongodb://localhost:27017/heroku_test', {useNewUrlParser: true});
+
+mongoose.connect('mongodb+srv://C_S:1234@cluster0-bhlmy.mongodb.net/test', {useNewUrlParser: true});
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
