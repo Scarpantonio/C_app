@@ -25,7 +25,7 @@ app.use(express.static('public'))
 // local mongoose
 // mongoose.connect('mongodb://localhost:27017/heroku_test', {useNewUrlParser: true});
 
-mongoose.connect('mongodb+srv://C_S:1234@cluster0-bhlmy.mongodb.net/test', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://C_S:1234@cluster0-bhlmy.mongodb.net/C_app', {useNewUrlParser: true});
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
