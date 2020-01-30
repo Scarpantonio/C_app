@@ -23,13 +23,22 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 
 mongoose.connect('mongodb://localhost:27017/heroku_test', {useNewUrlParser: true});
-// mongoose.connect('mongodb://localhost/heroku_test', {useNewUrlParser: true});
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.listen(2000,()=>{
-    console.log('listening to port 2000')
+// heroku port
+let port = process.env.PORT;
+if(port == null && port == ""){
+    port = 4000;
+}
+
+app.listen(port, ()=>{
+    console.log('App listening 4000...')    
 })
+
+// app.listen(2000,()=>{
+//     console.log('listening to port 2000')
+// })
 
 app.get('/posts/new',(req,res) => {
     res.render('create')
